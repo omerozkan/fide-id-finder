@@ -45,6 +45,7 @@ namespace FIDE_ID_Finder
                     var reader = new StreamReader(fs);
                     _fileContents = reader.ReadToEnd();
                     _logger.Log("File read from " + openFileDialog.FileName);
+                    filePathLabel.Text = openFileDialog.FileName;
                     reader.Close();
                     fs.Close();
                 }
