@@ -27,8 +27,7 @@ namespace FIDE_ID_Finder.Helpers
         public static string FilterAndUpperFirst(string value)
         {
             var ti = System.Globalization.CultureInfo.CurrentCulture.TextInfo;
-
-            return ti.ToTitleCase(Filter(value));
+            return ti.ToTitleCase(Filter(value.ToLowerInvariant()));
         }
     }
 }
